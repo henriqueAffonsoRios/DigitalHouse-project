@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smartphones</title>
+  <title>Busca</title>
   <link rel="stylesheet" href="/stylesheets/list-products.css">
 </head>
 
@@ -21,6 +21,10 @@
 
   <main>
 
+    <%if(!result){%>
+<h2>Não foram encontra</h2>
+<%}else{%>
+
     <div class="box-container">
 
       <div class="title-container">
@@ -30,7 +34,7 @@
 
       <div class="products-container">
 
-      <% smartphones.forEach(product=> {%>
+      <% result.forEach(product=> {%>
 
       <a href="/detalhe/<%=product.product_id%>">
         <div class="add-product-container">
@@ -58,6 +62,7 @@
 
     </div>
 
+  <%}%>
 
     <div class="support-container">
 

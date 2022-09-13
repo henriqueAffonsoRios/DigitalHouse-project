@@ -39,6 +39,12 @@ span {
   color: #fff;
 }
 
+.form{
+  display: inline;
+  width: 100%;
+
+}
+
 .header-titles {
   padding: 10px 5px;
   color: var(--white);

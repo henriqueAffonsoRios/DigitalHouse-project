@@ -4,8 +4,8 @@
     </div>
 
     <div class="search">
-        <input type="text" class="searchTerm" placeholder="Busque aqui o seu produto   " />
-        <button type="submit" class="searchButton">
+        <form class="form" action="/buscar" method="post" id="search"><input type="text" class="searchTerm" placeholder="Busque aqui o seu produto" name="searchTerm" id="searchTerm" /></form>
+        <button type="submit" class="searchButton" form="search">
             <i class="fa fa-search"></i>
         </button>
     </div>
@@ -38,8 +38,8 @@
                 <a href="/usuario/login" class="nav-icon-links"><img src="/images/icons/account.svg" alt="" /></a>
                 <a href="/usuario/login" class="nav-text-links">Minha Conta</a>
                <% } else { %>
-                <a href="/usuario/user" class="nav-icon-links"><img src="/images/icons/account.svg" alt="" /></a>
-                <a href="/usuario/user" class="nav-text-links">Minha Conta</a>
+                <a href="/usuario/login" class="nav-icon-links"><img src="/images/icons/account.svg" alt="" /></a>
+                <a href="/usuario/login" class="nav-text-links">Minha Conta</a>
                 <% } %>
             </div>
 

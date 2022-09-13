@@ -119,9 +119,15 @@ const filters = {
       });
     }
 
-    let limit = "none";
+    if (!brands && value && !order) {
+      allProducts = await model.findAll({
+        where: {
+          price_discount: { [Op.lt]: value },
+        }
+      });
+    }
 
-    // console.log(all)
+    let limit = "none";
 
     return res.render("allProducts", {
       products: allProducts,

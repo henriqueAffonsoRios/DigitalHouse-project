@@ -72,6 +72,34 @@ const menuController = {
         console.log(error);
       });
   },
+  seach: (req, res)=>{
+const {searchTerm} = req.body
+
+const search = `%${searchTerm}%`
+
+    Product.findAll({
+      where: {
+        name: {
+          [Op.like]: search,
+        },
+      },
+    })
+      .then((products) => {
+        let result = [];
+
+        products.map((product) => {
+          result.push(product._previousDataValues);
+        });
+        if(result.length <1){
+          result ==false
+        }
+        res.render("search-result", { result, price, limiterText });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+  }
 };
 
 module.exports = menuController;

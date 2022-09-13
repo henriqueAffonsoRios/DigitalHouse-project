@@ -18,11 +18,19 @@ module.exports = (sequelize, datatypes)=>{
       payment_method: {
         type: datatypes.STRING,
         allowNull: false
+      },
+      order_number: {
+        type: datatypes.STRING,
+        allowNull: false
+      },
+      date: {
+        type: datatypes.DATE,
+        allowNull: false
       }
     }
 
     const config = {
-        tableName: "order",
+        tableName: "orders",
         timestamps: false
     }
 

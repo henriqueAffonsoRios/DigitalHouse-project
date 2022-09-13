@@ -79,7 +79,7 @@
     position: absolute;
     right: 12px;
     top: 5px;
-    display: flex;
+    display: none;
     align-items: center;
     animation: blink 1.5s infinite;
     gap: 10px;

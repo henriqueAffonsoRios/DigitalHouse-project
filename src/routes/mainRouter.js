@@ -19,6 +19,8 @@ router.get('/detalhe', mainController.detail);
 
 router.get('/meu-endereco', auth, mainController.myAddress);
 
+router.get('/sucesso', auth, mainController.sucess);
+
 router.post('/meu-endereco',auth, mainController.newAddress);
 
 router.get('/endereco/resumo',auth, mainController.addressResume);

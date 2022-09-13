@@ -102,56 +102,44 @@ function order(){
     }
 }
 
+const value1Class = document.querySelector(".value1Class")
+const value2Class = document.querySelector(".value2Class")
+const value3Class = document.querySelector(".value3Class")
+const value4Class = document.querySelector(".value4Class")
+const value5Class = document.querySelector(".value5Class")
+
 function valueCheck(){
     if(value1.checked){
         value2Class.style.display = "none"
         value3Class.style.display = "none"
         value4Class.style.display = "none"
-        value5Class.style.display = "none"
     }if(!value1.checked){
         value2Class.style.display = "block"
         value3Class.style.display = "block"
         value4Class.style.display = "block"
-        value5Class.style.display = "block"
     } if(value2.checked){
         value1Class.style.display = "none"
         value3Class.style.display = "none"
         value4Class.style.display = "none"
-        value5Class.style.display = "none"
     }if(!value2.checked && !value1.checked){
         value1Class.style.display = "block"
         value3Class.style.display = "block"
         value4Class.style.display = "block"
-        value5Class.style.display = "block"
     }if(value3.checked){
         value1Class.style.display = "none"
         value2Class.style.display = "none"
         value4Class.style.display = "none"
-        value5Class.style.display = "none"
     }if(!value3.checked && !value2.checked && !value1.checked){
         value1Class.style.display = "block"
         value2Class.style.display = "block"
         value4Class.style.display = "block"
-        value5Class.style.display = "block"
 }if(value4.checked){
     value1Class.style.display = "none"
     value2Class.style.display = "none"
     value3Class.style.display = "none"
-    value5Class.style.display = "none"
 }if(!value4.checked && !value1.checked && !value2.checked && !value3.checked){
     value1Class.style.display = "block"
     value2Class.style.display = "block"
     value3Class.style.display = "block"
-    value5Class.style.display = "block"
-}if(value5.checked){
-    value1Class.style.display = "none"
-    value2Class.style.display = "none"
-    value3Class.style.display = "none"
-    value4Class.style.display = "none"
-}if(!value5.checked && !value1.checked && !value2.checked && !value3.checked && !value4.checked){
-    value1Class.style.display = "block"
-    value2Class.style.display = "block"
-    value3Class.style.display = "block"
-    value4Class.style.display = "block"
 }
 }

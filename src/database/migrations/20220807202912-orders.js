@@ -21,6 +21,14 @@ module.exports = {
       payment_method: {
         type:sequelize.STRING,
         allowNull: false
+      },
+      order_number: {
+        type: sequelize.STRING,
+        allowNull: false
+      },
+      date: {
+        type: sequelize.DATE,
+        allowNull: false
       }
     });
   },
